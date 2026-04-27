@@ -12,20 +12,21 @@
       --orange: #C0460A;
       --dark: #2B1D0E;
     }
- 
+
     body {
       background-color: var(--cream);
       font-family: 'Mate SC', serif;
       color: var(--dark);
       margin: 0;
     }
- 
+
+    /* ── NAVBAR ── */
     .navbar {
       background-color: var(--cream);
       padding: 14px 24px;
       border-bottom: 2px solid var(--dark);
     }
- 
+
     .navbar-brand {
       background-color: var(--orange);
       color: white !important;
@@ -36,7 +37,7 @@
       text-decoration: none;
       letter-spacing: 1px;
     }
- 
+
     .nav-link {
       background-color: var(--orange) !important;
       color: white !important;
@@ -48,16 +49,16 @@
       text-decoration: none;
       transition: background 0.2s;
     }
- 
+
     .nav-link:hover, .nav-link.active {
       background-color: var(--dark) !important;
     }
- 
+
     /* ── MAIN CONTENT ── */
     .main-content {
       padding: 24px;
     }
- 
+
     /* Left sidebar card */
     .sidebar-card {
       border: 2px solid var(--orange);
@@ -65,7 +66,7 @@
       padding: 28px 24px;
       height: 100%;
     }
- 
+
     .sidebar-card h3 {
       font-family: 'Mate SC', serif;
       font-size: 1.1rem;
@@ -74,16 +75,16 @@
       margin-top: 20px;
       margin-bottom: 8px;
     }
- 
+
     .sidebar-card h3:first-child {
       margin-top: 0;
     }
- 
+
     .sidebar-card ul {
       padding-left: 20px;
       margin-bottom: 4px;
     }
- 
+
     .sidebar-card li {
       font-family: 'Mate SC', serif;
       font-size: 0.95rem;
@@ -92,22 +93,24 @@
       line-height: 1.7;
       margin-bottom: 6px;
     }
- 
-    /* Resume image card */
+
+    /* Resume PDF card */
     .resume-card {
       border: 2px solid var(--dark);
       background-color: white;
       padding: 0;
       overflow: hidden;
     }
- 
+
     .resume-card iframe {
       width: 100%;
       height: 1100px;
+      min-height: 1100px;
       display: block;
       border: none;
+      transform-origin: top left;
     }
- 
+
     /* Download button */
     .btn-download {
       background-color: var(--orange);
@@ -122,12 +125,12 @@
       margin-bottom: 16px;
       transition: background 0.2s;
     }
- 
+
     .btn-download:hover {
       background-color: var(--dark);
       color: white;
     }
- 
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .main-content { padding: 12px; }
@@ -136,7 +139,7 @@
   </style>
 </head>
 <body>
- 
+
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -154,54 +157,54 @@
       </div>
     </div>
   </nav>
- 
+
   <!-- MAIN CONTENT -->
   <div class="main-content">
- 
-    <!--Download button above content-->
-    <a href="CamronHeaden2026_Resume.png" download="CamronHeaden2026_Resume.png" class="btn-download">
+
+    <!-- Download button -->
+    <a href="images/CamronHeaden2026_Resume.pdf" download="CamronHeaden2026_Resume.pdf" class="btn-download">
       ↓ Download Resume
     </a>
- 
+
     <div class="row g-4">
- 
+
       <!-- (Coursework, Languages, Awards) -->
       <div class="col-lg-5">
         <div class="sidebar-card">
- 
+
           <h3>Relevant Coursework:</h3>
           <ul>
             <li>Management Information Systems</li>
             <li>Human-Computer Interaction</li>
             <li>Applied Probability & Statistics</li>
           </ul>
- 
+
           <h3>Languages:</h3>
           <ul>
             <li>English</li>
             <li>German</li>
           </ul>
- 
+
           <h3>Awards & Honors:</h3>
           <ul>
             <li>Dean's List – Fall 2025</li>
             <li>Academics Honors – Spring 2025</li>
             <li>Intercultural Management Competency Badge for Adaptability and Global Communication (Winter 2025)</li>
           </ul>
- 
+
         </div>
       </div>
- 
-      <!-- Resume Image -->
+
+      <!-- Resume PDF -->
       <div class="col-lg-7">
         <div class="resume-card">
-          <iframe src="images/CamronHeaden2026_Resume.pdf" title="Camron Mekhi Headen Resume"></iframe>
+          <iframe src="images/CamronHeaden2026_Resume.pdf#zoom=100&toolbar=0" title="Camron Mekhi Headen Resume"></iframe>
         </div>
       </div>
- 
+
     </div>
   </div>
- 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
