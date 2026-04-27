@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Camron Mekhi Headen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F5F0D8;
+      --orange: #C0460A;
+      --dark: #2B1D0E;
+      --footer-bg: #E8E0C0;
+    }
+ 
+    body {
+      background-color: var(--cream);
+      font-family: 'Mate SC', serif;
+      color: var(--dark);
+      margin: 0;
+    }
+ 
+    /* ── NAVBAR ── */
+    .navbar {
+      background-color: var(--cream);
+      padding: 14px 24px;
+      border-bottom: 2px solid var(--dark);
+    }
+ 
+    .navbar-brand {
+      background-color: var(--orange);
+      color: white !important;
+      font-family: 'Mate SC', serif;
+      font-size: 1.3rem;
+      padding: 10px 22px;
+      border: 3px solid #4a90d9;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+ 
+    .nav-link {
+      background-color: var(--orange) !important;
+      color: white !important;
+      font-family: 'Mate SC', serif;
+      font-size: 1rem;
+      padding: 10px 28px !important;
+      margin-left: 10px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+ 
+    .nav-link:hover, .nav-link.active {
+      background-color: var(--dark) !important;
+    }
+ 
+    /* ── MAIN CONTENT ── */
+    .main-content {
+      padding: 24px;
+    }
+ 
+    /* Bio card */
+    .bio-card {
+      border: 2px solid var(--orange);
+      background-color: var(--cream);
+      padding: 36px 32px;
+      height: 100%;
+    }
+ 
+    .bio-card h2 {
+      font-family: 'Mate SC', serif;
+      font-size: 2.4rem;
+      color: var(--orange);
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--dark);
+    }
+ 
+    .bio-card p {
+      font-family: 'Mate SC', serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--dark);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+ 
+    /* Skills card */
+    .skills-card {
+      border: 2px solid var(--dark);
+      background-color: var(--cream);
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+ 
+    .skills-card h3 {
+      font-family: 'Mate SC', serif;
+      font-size: 1.8rem;
+      color: var(--orange);
+      margin-bottom: 20px;
+      border-left: 4px solid var(--orange);
+      padding-left: 12px;
+    }
+ 
+    .skill-badge {
+      background-color: var(--orange);
+      color: white;
+      font-family: 'Mate SC', serif;
+      font-size: 0.85rem;
+      padding: 10px 0;
+      text-align: center;
+      letter-spacing: 1px;
+      border: none;
+      width: 100%;
+      display: block;
+    }
+ 
+    /* Education card */
+    .education-card {
+      border: 2px solid var(--dark);
+      background-color: var(--cream);
+      padding: 24px 28px;
+    }
+ 
+    .education-card h4 {
+      font-family: 'Mate SC', serif;
+      font-size: 1rem;
+      color: var(--dark);
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+ 
+    .education-card p,
+    .education-card li {
+      font-family: 'Mate SC', serif;
+      font-size: 0.9rem;
+      color: var(--dark);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+ 
+    .education-card ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+ 
+    .education-card .section-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 14px;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+ 
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-content { padding: 12px; }
+      .bio-card h2 { font-size: 1.8rem; }
+      .nav-link { margin-left: 0; margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="row g-4">
+ 
+      <!-- Bio -->
+      <div class="col-lg-5">
+        <div class="bio-card">
+          <h2>Hello!</h2>
+          <p>
+            I am currently a senior majoring in Information Systems with a minor in
+            German Studies at the University of Maryland - Baltimore County, who had also
+            been admitted for a certificate program in UX design this upcoming fall at UMBC.
+          </p>
+          <p>
+            Over my academic career, I've explored the intersection of artificial intelligence and
+            user-centered design through academic projects, intensive workshops, and cross-functional teamwork.
+          </p>
+        </div>
+      </div>
+ 
+      <!-- Skills + Education -->
+      <div class="col-lg-7">
+ 
+        <!--Skills-->
+        <div class="skills-card">
+          <h3>Skills</h3>
+          <div class="row g-2">
+            <div class="col-4"><span class="skill-badge">SQL</span></div>
+            <div class="col-4"><span class="skill-badge">UX/UI</span></div>
+            <div class="col-4"><span class="skill-badge">Docker</span></div>
+            <div class="col-4"><span class="skill-badge">R-Studio</span></div>
+            <div class="col-4"><span class="skill-badge">GitHub</span></div>
+            <div class="col-4"><span class="skill-badge">HTML</span></div>
+          </div>
+        </div>
+ 
+        <!--Education-->
+        <div class="education-card">
+          <h4>Education</h4>
+          <p>
+            University of Maryland – Baltimore County (UMBC), Baltimore, MD<br>
+            BA: Information Systems, Minor: German Studies | Aug 2022 – Dec 2026
+          </p>
+          <ul>
+            <li>Cumulative GPA: 3.15</li>
+          </ul>
+ 
+          <p class="section-title">Professional Certificate(s)</p>
+          <ul>
+            <li>
+              Human-Computer Interaction I: Fundamentals & Design Principles
+              (Georgia Tech University, Aug 2025)
+            </li>
+          </ul>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 

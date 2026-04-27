@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Camron Mekhi Headen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F5F0D8;
+      --orange: #C0460A;
+      --dark: #2B1D0E;
+    }
+ 
+    body {
+      background-color: var(--cream);
+      font-family: 'Mate SC', serif;
+      color: var(--dark);
+      margin: 0;
+    }
+ 
+    /* ── NAVBAR ── */
+    .navbar {
+      background-color: var(--cream);
+      padding: 14px 24px;
+      border-bottom: 2px solid var(--dark);
+    }
+ 
+    .navbar-brand {
+      background-color: var(--orange);
+      color: white !important;
+      font-family: 'Mate SC', serif;
+      font-size: 1.3rem;
+      padding: 10px 22px;
+      border: 3px solid #4a90d9;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+ 
+    .nav-link {
+      background-color: var(--orange) !important;
+      color: white !important;
+      font-family: 'Mate SC', serif;
+      font-size: 1rem;
+      padding: 10px 28px !important;
+      margin-left: 10px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+ 
+    .nav-link:hover, .nav-link.active {
+      background-color: var(--dark) !important;
+    }
+ 
+    /* ── MAIN CONTENT ── */
+    .main-content {
+      padding: 24px;
+    }
+ 
+    /* Header card */
+    .header-card {
+      border: 2px solid var(--dark);
+      border-left: 5px solid var(--orange);
+      background-color: var(--cream);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+ 
+    .header-card h1 {
+      font-family: 'Mate SC', serif;
+      font-size: 2.4rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+ 
+    .header-card p {
+      font-family: 'Mate SC', serif;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--dark);
+      margin: 0;
+    }
+ 
+    /* Project cards */
+    .project-card {
+      border: 2px solid var(--dark);
+      background-color: var(--cream);
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+ 
+    .project-card.highlight {
+      border: 3px solid #4a90d9;
+    }
+ 
+    /* Left side of project card */
+    .project-left {
+      padding: 24px 20px;
+      border-right: 2px solid var(--dark);
+      min-width: 200px;
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+ 
+    .project-name {
+      font-family: 'Mate SC', serif;
+      font-size: 1.4rem;
+      color: var(--orange);
+      margin-bottom: 4px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--dark);
+    }
+ 
+    .project-date {
+      font-family: 'Mate SC', serif;
+      font-size: 0.85rem;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+ 
+    .badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+ 
+    .skill-badge {
+      background-color: var(--orange);
+      color: white;
+      font-family: 'Mate SC', serif;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      letter-spacing: 0.5px;
+      border: none;
+    }
+ 
+    .skill-badge.outline {
+      background-color: var(--cream);
+      color: var(--orange);
+      border: 2px solid var(--orange);
+    }
+ 
+    /* Right side of project card */
+    .project-right {
+      padding: 24px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+ 
+    .project-right ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+ 
+    .project-right li {
+      font-family: 'Mate SC', serif;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 8px;
+    }
+ 
+    .more-details {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Mate SC', serif;
+      font-size: 0.82rem;
+      color: var(--dark);
+      text-decoration: none;
+      margin-top: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+ 
+    .more-details:hover {
+      color: var(--orange);
+    }
+ 
+    .more-details .arrow {
+      font-size: 1.2rem;
+    }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .project-card { flex-direction: column; }
+      .project-left { max-width: 100%; border-right: none; border-bottom: 2px solid var(--dark); }
+      .main-content { padding: 12px; }
+      .nav-link { margin-left: 0; margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+ 
+    <!-- Page Header -->
+    <div class="header-card">
+      <h1>Projects</h1>
+      <p>A collection of some of my major projects, both academic &amp; extracurricular</p>
+    </div>
+ 
+    <!-- Project Grid -->
+    <div class="row g-3">
+ 
+      <!-- GRIDHACK -->
+      <div class="col-lg-6">
+        <div class="project-card highlight">
+          <div class="project-left">
+            <h2 class="project-name">Gridhack</h2>
+            <p class="project-date">Spring 2026</p>
+            <div class="badge-wrap">
+              <span class="skill-badge">AI</span>
+              <span class="skill-badge">EcoGuard</span>
+              <span class="skill-badge">Research</span>
+            </div>
+          </div>
+          <div class="project-right">
+            <ul>
+              <li>
+                Co-led a team to engineer an energy recommendation form for Montgomery
+                County Public Library, integrating EcoGuard and data packages during a
+                5-hour AI competition and hackathon; awarded 2nd place
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- AI4ALL -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-left">
+            <h2 class="project-name">AI4ALL</h2>
+            <p class="project-date">Spring 2023</p>
+            <div class="badge-wrap">
+              <span class="skill-badge">AI</span>
+              <span class="skill-badge outline">Research</span>
+              <span class="skill-badge outline">Ethics</span>
+            </div>
+          </div>
+          <div class="project-right">
+            <ul>
+              <li>
+                10-week AI workshop; led and designed research-backed AI application
+                concept analyzing technical and ethical implications
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- CUEVISION -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-left">
+            <h2 class="project-name">CueVision</h2>
+            <p class="project-date">Spring 2026</p>
+            <div class="badge-wrap">
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">UX/UI</span>
+              <span class="skill-badge">SDLC</span>
+            </div>
+          </div>
+          <div class="project-right">
+            <ul>
+              <li>
+                Led UX/UI design and co-developed SQL database architecture for CueVision,
+                a pool match livestreaming and recording system; defined functional and
+                non-functional requirements, designed user authentication flows, and
+                created use case diagrams for a 5-person agile team
+              </li>
+            </ul>
+            <a href="https://github.com/middeko/IS436GROUP7" target="_blank" class="more-details">
+              · More Details Here: <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- KNIGHTRIDE -->
+      <div class="col-lg-6">
+        <div class="project-card">
+          <div class="project-left">
+            <h2 class="project-name">KnightRide</h2>
+            <p class="project-date">Spring 2022</p>
+            <div class="badge-wrap">
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge outline">UX/UI</span>
+              <span class="skill-badge outline">Research</span>
+            </div>
+          </div>
+          <div class="project-right">
+            <ul>
+              <li>
+                Developed high-fidelity prototype for a campus safety transportation
+                app using Figma; conducted user research via surveys and interviews.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 
